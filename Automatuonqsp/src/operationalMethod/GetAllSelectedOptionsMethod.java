@@ -25,7 +25,9 @@ public static void main(String[] args) throws InterruptedException {
 	List<WebElement> options = sel.getAllSelectedOptions();
 	for (WebElement we : options) 
 	{
-		System.out.println(we.getText());
+		String status = we.getText();
+		System.out.println(status);
+		Thread.sleep(2000);
 	}
 }
 }
