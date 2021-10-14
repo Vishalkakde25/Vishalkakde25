@@ -1,0 +1,33 @@
+package operationalMethod;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class GetOptions {
+public static void main(String[] args) throws InterruptedException {
+	System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+	driver.manage().window().maximize();
+	driver.get("file:///C:/Users/Pravin%20kakde/OneDrive/Desktop/HTML/muti%20select%20Dropdown.html");
+	WebElement element = driver.findElement(By.id("menu"));
+	Select sel=new Select(element);
+	List<WebElement> option = sel.getOptions();
+	/*for (int i = 0; i < option.size(); i++) 
+	{
+		System.out.println(option.get(i).getText());   //for Loop
+	}*/
+	for (WebElement we : option)
+	{
+		System.out.println(we.getText());           //For Each Loop
+		Thread.sleep(1000);
+	}
+	
+}
+}

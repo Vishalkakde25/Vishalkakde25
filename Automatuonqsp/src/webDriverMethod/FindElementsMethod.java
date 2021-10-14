@@ -15,16 +15,16 @@ public class FindElementsMethod {
 		driver.findElement(By.name("q")).sendKeys("bike");
 		Thread.sleep(3000);
 		List<WebElement> suggestions = driver.findElements(By.xpath("//div[@class='pcTkSc']"));
-	  
-		/* for(int n=0;n<suggestions.size();n++)
+
+		/* for( int n=0;n<suggestions.size();n++)
 	    {
 	    	WebElement suggestion = suggestions.get(n);
 	    	 String we = suggestion.getText();
 	    	System.out.println(we);
 	    }*/
-		
+
 		for (WebElement we : suggestions) {
 			System.out.println(we.getText());
 		}
-	    }
 	}
+}

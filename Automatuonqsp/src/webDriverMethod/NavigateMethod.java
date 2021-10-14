@@ -10,11 +10,8 @@ public class NavigateMethod {
 		WebDriver driver=new ChromeDriver();
 		driver.navigate().to("https://www.google.com");
 		driver.switchTo().activeElement().sendKeys("java",Keys.ENTER);
-		Thread.sleep(3000);
 		driver.navigate().back();
-		Thread.sleep(3000);
 		driver.navigate().forward();
-		Thread.sleep(3000);
 		driver.navigate().refresh();
 	}
 }

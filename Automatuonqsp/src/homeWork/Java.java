@@ -1,9 +1,21 @@
 package homeWork;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class Java {
-public static void main(String[] args) {
-	String a="Vishal";
-	System.out.println(a.charAt(0));
-	System.out.println(a.charAt(1));
-}
+	public static void main(String[] args) {
+		
+		String obj="Vishal";
+		StringBuilder p=new StringBuilder();
+		System.out.println(obj);
+		char[] a=obj.toCharArray();
+		for (int i =a.length-1;i>=0; i--) {
+			System.out.println(a[i]);
+		}
+		
+		p.append(obj);
+		System.out.println(p.reverse());
+		
+	}
 }
